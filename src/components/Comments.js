@@ -7,7 +7,7 @@ class Comments extends React.Component {
 
         this.state = {
             isFetching: false,
-            comments: {}
+            comments: []
         }
 
     }
@@ -17,7 +17,8 @@ class Comments extends React.Component {
 
         fetch('https://jsonplaceholder.typicode.com/comments')
             .then(res => res.json())
-            .then(data => console.log(data[1].body))
+            .then(data => this.setState({ comments: data }))
+
     }
 
 
@@ -33,6 +34,18 @@ class Comments extends React.Component {
         return (
             <>
                 <p> Our comments will be rendered over here  </p>
+
+                {
+                    this.state.comments.map((post) => {
+
+                        return (
+                            <div className="container">
+                                <h2 key={post.postId}>{post.name}</h2>
+                                <p key={post.PostId}>{post.body}</p>
+                            </div>
+                        )
+                    })
+                }
             </>
         )
     }
