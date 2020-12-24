@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import Comments from './components/Comments';
 import './App.css';
 
 function App() {
