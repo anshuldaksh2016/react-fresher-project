@@ -3,6 +3,16 @@ import React from 'react';
 
 class Comments extends React.Component {
 
+    constructor() {
+        super();
+
+        this.state = {
+            isFetching: false,
+            comments: {}
+        }
+
+    }
+
     render() {
         return (
             <>
