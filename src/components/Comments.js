@@ -22,10 +22,10 @@ class Comments extends React.Component {
 
     }
 
-    clickHandler(postId) {
-        console.log("Clicked");
-
-    }
+    //    clickHandler(postId) {
+    //        console.log("Clicked");
+    //
+    //    }
 
     componentDidMount() {
 
@@ -43,9 +43,11 @@ class Comments extends React.Component {
                     this.state.comments.map((post) => {
 
                         return (
-                            <div className="container" onClick={this.clickHandler(post.postId)}>
-                                <h2 key={post.postId}>{post.name}</h2>
-                                <p key={post.PostId}>{post.body}</p>
+                            <div className="container" >
+                                <h2
+                                    key={post.postId}>{post.name}</h2>
+                                <p
+                                    key={post.PostId}>{post.body}</p>
                             </div>
                         )
                     })
