@@ -43,7 +43,7 @@ class Comments extends React.Component {
                     this.state.comments.map((post) => {
 
                         return (
-                            <div className="container" >
+                            <div className="container">
                                 <h2
                                     key={post.postId}>{post.name}</h2>
                                 <p
